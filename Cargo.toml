@@ -1,5 +1,7 @@
 [package]
 name = "solana_data_structs"
+description = "Data structures optimized for usage in on-chain Solana programs."
+license = "./LICENSE"
 version = "0.1.0"
 edition = "2021"
 
