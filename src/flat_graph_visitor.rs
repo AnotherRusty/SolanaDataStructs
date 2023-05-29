@@ -1,8 +1,9 @@
+use borsh::{BorshDeserialize, BorshSerialize};
 use rkyv::{Archive, Deserialize, Serialize};
 
 use crate::FlatGraph;
 
-#[derive(Clone, Debug, Archive, Deserialize, Serialize)]
+#[derive(Clone, Debug, Archive, Deserialize, Serialize, BorshSerialize, BorshDeserialize)]
 pub struct FlatGraphVisitor<'a, D, E> {
     pub graph: &'a FlatGraph<D, E>,
     pub index: usize,

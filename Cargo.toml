@@ -1,7 +1,6 @@
 [package]
 name = "solana_data_structs"
 description = "Data structures optimized for usage in on-chain Solana programs."
-license = "MIT"
 license-file = "LICENSE"
 version = "0.1.0"
 edition = "2021"
@@ -9,4 +8,5 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+borsh = "0.9.3"
 rkyv = "0.7.2"

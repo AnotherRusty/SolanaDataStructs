@@ -1,6 +1,7 @@
+use borsh::{BorshDeserialize, BorshSerialize};
 use rkyv::{Archive, Deserialize, Serialize};
 
-#[derive(Clone, Debug, Archive, Deserialize, Serialize)]
+#[derive(Clone, Debug, Archive, Deserialize, Serialize, BorshSerialize, BorshDeserialize)]
 pub struct GraphEdge<E> {
     pub data: E,
     pub node: usize,
@@ -12,7 +13,7 @@ impl<E> GraphEdge<E> {
     }
 }
 
-#[derive(Clone, Debug, Archive, Deserialize, Serialize)]
+#[derive(Clone, Debug, Archive, Deserialize, Serialize, BorshSerialize, BorshDeserialize)]
 pub struct GraphNode<D, E> {
     pub data: D,
     pub edges: Vec<GraphEdge<E>>,

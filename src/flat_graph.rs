@@ -1,8 +1,9 @@
+use borsh::{BorshDeserialize, BorshSerialize};
 use rkyv::{Archive, Deserialize, Serialize};
 
 use crate::{graph_node::GraphNode, GraphEdge};
 
-#[derive(Debug, Archive, Deserialize, Serialize)]
+#[derive(Debug, Archive, Deserialize, Serialize, BorshSerialize, BorshDeserialize)]
 pub struct FlatGraph<D, E> {
     pub nodes: Vec<GraphNode<D, E>>,
 }
